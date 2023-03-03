@@ -40,7 +40,6 @@ playerChoice.forEach(playerChoice => playerChoice.addEventListener('click', () =
     if(playerHand === computerHand) {
         result.innerHTML = ("Empate!")
         tie()
-        transition()
     }
 
     // Derrota
@@ -50,7 +49,6 @@ playerChoice.forEach(playerChoice => playerChoice.addEventListener('click', () =
         playerHand === 'scissors' && computerHand === 'rock') 
     {
         loose()
-        transition()
     }
 
     // Vitória
@@ -60,7 +58,6 @@ playerChoice.forEach(playerChoice => playerChoice.addEventListener('click', () =
         playerHand === 'scissors' && computerHand === 'paper') 
     {
         win()
-        transition()
     }
     
     function loose() {
@@ -107,11 +104,6 @@ playerChoice.forEach(playerChoice => playerChoice.addEventListener('click', () =
             computerDisplay.classList.remove('win')
         }
         computerDisplay.classList.add('tie')
-    }
-
-    function transition() {
-        computerDisplay.classList.toggle('transition')
-        playerDisplay.classList.toggle('transition')
     }
 
     var computerChoice = 0

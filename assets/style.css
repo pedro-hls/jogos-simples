@@ -24,7 +24,10 @@ body, html {
 }
 
 body {
-    background: url(images/background-blur.jpg);
+    background: url(images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .main-container {
@@ -41,13 +44,11 @@ body {
     height: 35px;
     border-radius: 5px 5px 0px 0px;
     background: #0150da;
-    background: linear-gradient(0deg, #0058ed 54%, #1c71ff 72%, #5594ff 94%, #0150da 100%);
-
+    background: linear-gradient(0deg, #0150da 2%, #0058ed 54%, #1c71ff 72%, #5594ff 94%, #0150da 100%);
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-
     outline: 2px solid var(--azul);
 }
 
@@ -63,7 +64,7 @@ body {
 }
 
 .box-icon {
-    background: rgb(0,88,237);
+    background: #0058ed;
     background: linear-gradient(315deg, rgba(0,88,237,1) 52%, rgba(28,113,255,1) 64%, rgba(85,148,255,1) 100%);
     width: 23px;
     height: 23px;
@@ -107,14 +108,22 @@ body {
     background-color: var(--branco);
     border: 5px solid var(--azul);
     border-top: 0px;
-    height: 700px;
+    min-height: 400px;
     border-radius: 0px 0px 5px 5px;
     outline: 2px solid var(--azul);
     box-shadow: inset 0px 0px 2px black;
 }
 
+/* Imagens não arrastáveis*/
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 .rock-paper-scissors-content {
-    margin: 0px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,9 +148,11 @@ body {
 }
 
 .icons-players-container {
-    width: 455px;
+    min-width: 260px;
+    width: 44%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .player-icons {
@@ -158,12 +169,13 @@ body {
 
 .versus-icon {
     font-size: 2em;
+    margin: 0px 10px;
 }
 
 .buttons-image-size {
-    width: 200px;
-    height: 200px;
-    margin: 5px 25px 0px 25px;
+    min-width: 130px;
+    width: 20%;
+    height: auto;
 }
 
 .display-hands {
@@ -177,8 +189,15 @@ body {
 }
 
 .options-size {
-    width: 100px;
-    height: 100px;
+    min-width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.options-size-image {
+    min-width: 75px;
+    height: 75px;
+    padding: 5px;
 }
 
 .options:hover {
@@ -189,22 +208,6 @@ body {
 .options:active {
     transform: scale(0.95);
 }
-
-/* .transition {
-    animation-name: result;
-    animation-duration: 0.1s;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes result{
-    from {
-       transform: scale(1.05)
-    }
- 
-    to {
-       transform: translateX(1)
-    }
-} */
 
 .result {
     font-weight: bolder;
@@ -218,7 +221,8 @@ body {
 }
 
 .options {
-    margin: 0px 20px 0px 15px;
+    margin: 0px 8px;
+    margin-bottom: 45px;
 }
 
 .loose {
