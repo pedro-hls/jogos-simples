@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jogos! </title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="main-container">
+
+    <header class="header">
+        <i class="fa-solid fa-gamepad game-icon"></i>
+        <h1 class="titulo-app"> Jogos </h1>
+        <div class="box-icon"> <div class="minimize-icon"></div> </div>
+        <div class="box-icon"> <div class="maximize-icon"></div> </div>
+        <div class="box-icon exit-icon"><i class="fa-solid fa-xmark "></i></div>
+    </header>
+    
+    <main>
+        <section class="container-game">
+            <nav class="games-section"> </nav>
+            
+            <div class="rock-paper-scissors-content">
+
+                <h2 class="rps-title"> Jokenpô </h2>
+
+                <div class="icons-players-container">
+                    <i class="fa-regular fa-user player-icons"></i>
+                    <i class="fa-solid fa-computer player-icons"></i>
+                </div>
+
+                <div class="versus-container">
+                    <!-- Player Hand -->
+                    <img src="assets/images/rock-paper-scissors/left-rock.png" alt="escolha do jogador" class="display-hands buttons-image-size player-display tie">
+                    <i class="fa-solid fa-xmark versus-icon"></i>
+                    <!-- Computer Hand -->
+                    <img src="assets/images/rock-paper-scissors/right-rock.png" alt="Escolha do Computador" class="display-hands buttons-image-size computer-display tie">
+                </div>
+
+            <p class="result default-button"> ... </p>
+                
+                <!-- Choose Hand -->
+                <div class="choose-one-option">
+                    <button value="rock" class="display-hands options-size button-gradient options">
+                        <img src="assets/images/rock-paper-scissors/left-rock.png" alt="pedra" class="rock hand-options options-size"> Pedra
+                    </button>
+                    <button value="paper" class="display-hands options-size button-gradient options">
+                        <img src="assets/images/rock-paper-scissors/left-paper.png" alt="papel" class="paper hand-options options-size"> Papel
+                    </button>
+                    <button value="scissors" class="display-hands options-size button-gradient options">
+                        <img src="assets/images/rock-paper-scissors/left-scissors.png" alt="tesoura" class="scissors hand-options options-size"> Tesoura
+                    </button>
+                </div>
+
+            </div>
+        </section>
+        
+        <script src="assets/script.js"></script>
+        <script src="https://kit.fontawesome.com/a6c6a11ad0.js" crossorigin="anonymous"></script>
+    </main>
+
+</body>
+
+</html>
